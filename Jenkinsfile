@@ -90,7 +90,7 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 echo "Checking Deployment..."
-                sh 'kubectl rollout status deployment/taskmanager'
+                sh 'kubectl rollout status deployment/task-manager'
                 sh 'kubectl get deployments'
                 sh 'kubectl get pods'
                 sh 'kubectl get svc'
